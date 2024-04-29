@@ -18,12 +18,4 @@ This guide provides a detailed view of the various Serverless Logic concepts.
 
 // modules present in this assembly 
 
-include::about/modules/serverless-logic-overview-events.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-callbacks.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-jq-expressions.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-error-handling.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-congiguration-properties.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-input-output-schema-definition.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-custom-functions.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-timeouts.adoc[leveloffset=+1]
-//include::modules/serverless-logic-overview-parallelism.adoc[leveloffset=+1]
+include::modules/serverless-logic-overview-events.adoc[leveloffset=+1]
