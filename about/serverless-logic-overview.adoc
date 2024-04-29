@@ -21,3 +21,4 @@ This guide provides a detailed view of the various Serverless Logic concepts.
 include::modules/serverless-logic-overview-events.adoc[leveloffset=+1]
 include::modules/serverless-logic-overview-callbacks.adoc[leveloffset=+1]
 include::modules/serverless-logic-overview-jq-expressions.adoc[leveloffset=+1]
+include::modules/serverless-logic-overview-error-handling.adoc[leveloffset=+1]
