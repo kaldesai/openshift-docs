@@ -1,0 +1,84 @@
+// Module included in the following assemblies:
+// * about/serverless-logic-overview.adoc
+
+
+:_content-type: CONCEPT
+[id="serverless-logic-overview-timeouts_{context}"]
+= Timeouts in Serverless Logic
+
+Serverless Logic defines several timeouts configurations that you can use to configure maximum times for the workflow execution in different scenarios. You can configure how long a workflow can wait for an event to arrive when it is in a given state.
+
+Regardless of its workflow or state, the timeouts must be configured as an amount of time (a duration), which is considered to start when the referred scope becomes active. Timeouts use the `ISO 8601 data and time standard` to specify a duration of time and follow the format `PnDTnHnMn.nS` with days considered to be exactly 24 hours. For instance, `PT15M` configures 15 minutes, and `P2DT3H4M` defines 2 days, 3 hours and 4 minutes.
+
+NOTE: Month based timeouts like `P2M` (period of two months) are not valid since the month duration might vary. In that case you can use `PT60D` instead.
+
+== Workflow timeout
+
+To configure the maximum amount of time a workflow can be running before being canceled, you can use the workflow timeout. Once canceled, the workflow is considered to be finished, and will not be accessible through a GET request anymore. So it behaves as if the interrupt was `true` by default.
+
+Workflow timeouts are defined with the top-level `timeouts` property. It can have two types, `string` and `object`. If it is a `string` type. it defines an URI that points to a JSON or YAML file containing the workflow timeout definitions. If it is an `object` type, it is used to define the timeout definitions in-line. 
+
+For example, to cancel the workflow after an hour of execution, you must use the following configuration:
+
+.Example of workflow timeout
+[source,json]
+----
+  {
+  "id": "workflow_timeouts",
+  "version": "1.0",
+  "name": "Workflow Timeouts",
+  "description": "Simple workflow to show the workflowExecTimeout working",
+  "start": "PrintStartMessage",
+  "timeouts": {
+    "workflowExecTimeout": "PT1H"
+  } ...
+}
+----
+
+== Event timeout
+
+When you define a state in a workflow, you can use the `timeouts` property to configure the maximum time to complete this state. When that time is overdue, the state is considered timed-out, and the engine continues the execution from this state. The execution flow depends on the state type, for instance, a transition to a next state might be executed. 
+
+Event-based states can use the sub-property `eventTimeout` to configure the maximum time to wait for an event to arrive. This is the only property that is supported in current implementation.
+
+Event timeouts supports callback state timeout, switch state timeout, and event state timeout. 
+
+The Event state `timeouts` property can be used to specify state specific timeout settings. For event state it can contain the `eventTimeout` property which is defined using the `ISO 8601` data and time format. You can specify for example `PT15M` to represent 15 minutes or `P2DT3H4M` to represent 2 days, 3 hours and 4 minutes. The `eventTimeout` values should always be represented as durations and not as specific time intervals.
+
+If the Event state is a workflow starting state, incoming events may trigger workflow instances. In this case, if the `exclusive` property is set to `true`, the `eventTimeout` property should be ignored.
+
+If the `exclusive` property is set to false, in this case, the defined `eventTimeout` represents the time between arrival of specified events.
+
+For example, consider the following:
+
+[source,json]
+----
+{
+"states": [
+{
+    "name": "ExampleEventState",
+    "type": "event",
+    "exclusive": false,
+    "timeouts": {
+      "eventTimeout": "PT2M"
+    }
+    "onEvents": [
+        {
+            "eventRefs": [
+                "ExampleEvent1",
+                "ExampleEvent2"
+            ],
+            "actions": [
+              ...
+            ]
+        }
+    ],
+    "end": {
+        "terminate": true
+    }
+}
+]
+}
+----
+
+The first `eventTimeout` would start once any of the referenced events are consumed. If the second event does not occur within the defined eventTimeout, no workflow instance should be created.
