@@ -4,8 +4,71 @@
 
 :_content-type: CONCEPT
 [id="serverless-logic-overview-parallelism_{context}"]
-= Parallelism in Serverless Logic
+= Parallelism
 
-Serverless Logic serializes the execution of parallel tasks. The word `parallel` does not indicate simultaneous execution, but it means that there is no logical dependency between the execution of branches. An inactive branch can start or resume the execution of a task without waiting for an active branch to be completed, in case the latter suspends the execution (for example, wait for an event reception).
+Openshift Serverless Logic serializes the execution of parallel tasks. The word `parallel` does not indicate simultaneous execution, but it means that there is no logical dependency between the execution of branches. An inactive branch can start or resume the execution of a task without waiting for an active branch to be completed, in case the latter suspends the execution (for example, wait for an event reception).
 
 A parallel state can be seen a state which splits up the current workflow instance execution path into multiple ones, one for each branch. These execution paths are performed in parallel and are joined back into the current execution path depending on the defined `completionType` parameter value.
+
+.Example of parallel workflow in JSON format
+[source,json]
+----
+ {
+     "name":"ParallelExec",
+     "type":"parallel",
+     "completionType": "allOf",
+     "branches": [
+        {
+          "name": "Branch1",
+          "actions": [
+            {
+                "functionRef": {
+                    "refName": "functionNameOne",
+                    "arguments": {
+                        "order": "${ .someParam }"
+                    }
+                }
+            }
+        ]
+        },
+        {
+          "name": "Branch2",
+          "actions": [
+              {
+                  "functionRef": {
+                      "refName": "functionNameTwo",
+                      "arguments": {
+                          "order": "${ .someParam }"
+                      }
+                  }
+              }
+          ]
+        }
+     ],
+     "end": true
+}
+----
+
+.Example of parallel workflow in YAML format
+[source,yaml]
+----
+name: ParallelExec
+type: parallel
+completionType: allOf
+branches:
+- name: Branch1
+  actions:
+  - functionRef:
+      refName: functionNameOne
+      arguments:
+        order: "${ .someParam }"
+- name: Branch2
+  actions:
+  - functionRef:
+      refName: functionNameTwo
+      arguments:
+        order: "${ .someParam }"
+end: true
+----
+
+The parallel state defines a collection of `branches` that are executed in parallel. A parallel state can be seen a state which splits up the current workflow instance execution path into multiple ones, one for each branch. These execution paths are performed in parallel and are joined back into the current execution path depending on the defined `completionType` parameter value.

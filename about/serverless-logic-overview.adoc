@@ -1,20 +1,20 @@
 :_content-type: ASSEMBLY
 include::_attributes/common-attributes.adoc[]
 [id="serverless-logic-overview"]
-= Serverless Logic overview
+= OpenShift Serverless Logic overview
 :context: serverless-logic-overview
 
 toc::[]
 
-Serverless Logic enables developers or architects to define declarative workflow models that orchestrate event-driven, serverless applications.
+OpenShift Serverless Logic enables developers to define declarative workflow models that orchestrate event-driven, serverless applications.
 
-Serverless Logic is also designed to write workflows in formats (JSON or YAML) that might be better suited for developing and deploying serverless applications in cloud or container environments.
+You can write the workflow models in YAML or JSON format which are better suited for developing and deploying serverless applications in cloud or container environments.
 
-For Serverless Logic implementation, you can use the Kubernetes operator to deploy the workflow models using Knative. Knative Eventing plays an important role and provides the essential infrastructure for event-driven architectures.
+To deploy the workflows in your OpenShift Container Platform, you can use the Openshift Serverless Logic opearator.
 
 // Add additional resources if any
 
-This guide provides a detailed view of the various Serverless Logic concepts.
+The detailed view of the various Serverless Logic concepts is as follows:
 
 // modules present in this assembly 
 

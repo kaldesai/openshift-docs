@@ -4,11 +4,14 @@
 
 :_content-type: CONCEPT
 [id="serverless-logic-overview-custom-functions_{context}"]
-= Custom functions for Serverless Logic
+= Custom functions
 
-Serverless Logic supports the `custom` function type, which enables the implementations to extend the function definition capability. The `type` property defines a list of function types that are set by the specification. 
+Openshift Serverless Logic supports the `custom` function type, which enables the implementation to extend the function definitions capability. By combining with the proper `operation`, you can use a list of predefined function types. 
 
-NOTE: Custom function types might not be portable across other runtime implementations. 
+[NOTE]
+====
+Custom function types might not be portable across other runtime implementations.
+==== 
 
 == Sysout custom function
 
@@ -32,7 +35,7 @@ The string after the `:` is optional and is used to indicate the log level. The 
 
 == Java custom function
 
-Serverless Logic supports the `java` functions within an Apache Maven project, in which you define your workflow service.
+Openshift Serverless Logic supports the `java` functions within an Apache Maven project, in which you define your workflow service.
 
 The following example shows the declaration of a `java` function:
 
@@ -80,7 +83,7 @@ The following example shows the declaration of a `Camel` function:
 
 == Knative custom function
 
-Serverless Logic provides an implementation of a custom function through the `knative-serving` add-on to invoke Knative services. It allows you to have a static URI, defining a Knative service, which is used to perform HTTP requests. The Knative service defined in the URI is queried in the current Knative cluster and translated to a valid URL.
+Openshift Serverless Logic provides an implementation of a custom function through the `knative-serving` add-on to invoke Knative services. It allows you to have a static URI, defining a Knative service, which is used to perform HTTP requests. The Knative service defined in the URI is queried in the current Knative cluster and translated to a valid URL.
 
 Given the following deployed Knative service:
 
@@ -91,7 +94,7 @@ NAME                              URL                                           
 custom-function-knative-service   http://custom-function-knative-service.default.10.109.169.193.sslip.io   custom-function-knative-service-00001   3h16m   3 OK / 3     True
 ----
 
-You can declare a Serverless Logic custom function using the Knative service name, like the following:
+You can declare a Openshift Serverless Logic custom function using the Knative service name, like the following:
 
 [source,json]
 ----
@@ -108,11 +111,11 @@ You can declare a Serverless Logic custom function using the Knative service nam
 <2> `custom` is the function type
 <3> In `operation`, you set the coordinates of the Knative service.
 
-NOTE: The above function will send a `POST` request. If you don’t specify a path, Serverless Logic will use the root path (/). You can also send `GET` requests by setting `method=GET` in operation. In this case, the arguments are forwarded over a query string.
+NOTE: The above function will send a `POST` request. If you don’t specify a path, Openshift Serverless Logic will use the root path (/). You can also send `GET` requests by setting `method=GET` in operation. In this case, the arguments are forwarded over a query string.
 
 == Rest custom function
 
-Serverless Logic offers `REST` custom type as a shortcut. When using custom rest, in the function definition, you specify the HTTP URI to be invoked and the HTTP method (get, post, patch, or put) to be used, using the `operation` string. When the function is invoked, you pass the request arguments as you do when using an OpenAPI function. 
+Openshift Serverless Logic offers `REST` custom type as a shortcut. When using custom rest, in the function definition, you specify the HTTP URI to be invoked and the HTTP method (get, post, patch, or put) to be used, using the `operation` string. When the function is invoked, you pass the request arguments as you do when using an OpenAPI function. 
 
 The following example shows the declaration of a `rest` function:
 

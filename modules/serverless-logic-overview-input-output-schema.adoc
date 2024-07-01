@@ -4,7 +4,9 @@
 
 :_content-type: CONCEPT
 [id="serverless-logic-overview-input-output-schema_{context}"]
-= Input and output schema definition for Serverless Logic
+= Schema definitions
+
+Openshift Serverless Logic supports two types of schema definitions such as input schema definition and output schema definition.
 
 == Input schema definition
 
