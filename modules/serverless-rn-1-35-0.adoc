@@ -20,11 +20,11 @@
 
 * Go functions using S2I builder are now available as a Generally Available (GA) feature for Linux and Mac developers, allowing them to implement and build Go functions on these platforms.
 
-* Workflows deployed using the `dev` or `preview` profiles are now automatically configured to generate monitoring metrics for Prometheus.
+* {ServerlessLogicProductName} workflows deployed using the `dev` or `preview` profiles are now automatically configured to generate monitoring metrics for Prometheus.
 
 * The Jobs Service supporting service can now be scaled to zero by configuring the `spec.services.jobService.podTemplate.replicas` field in the `SonataFlowPlatform` custom resource (CR).
 
-* Workflows deployed with the `preview` and `gitops` profiles are now automatically configured to send grouped events to the Data Index, optimizing event traffic.
+* {ServerlessLogicProductName} workflows deployed with the `preview` and `gitops` profiles are now automatically configured to send grouped events to the Data Index, optimizing event traffic.
 
 * A more comprehensive list of errors in the workflow definition is now provided, rather than only displaying the first detected error.
 

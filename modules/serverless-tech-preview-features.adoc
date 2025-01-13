@@ -61,7 +61,7 @@ The following table provides information about which {ServerlessProductName} fea
 |Go function using S2I builder
 |TP
 |TP
-|TP
+|GA
 
 |Installing and using {ServerlessProductShortName} on {sno}
 |GA
