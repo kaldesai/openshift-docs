@@ -30,7 +30,7 @@
 
 * {ServerlessLogicProductName} is now certified for use with PostgreSQL version `15.9`.
 
-* Event performance between runtimes and the Data Index has been significantly enhanced through event batching. To enable event grouping, set the `kogito.events.grouping=true` property. For further optimization, you can use the `kogito.events.grouping.binary=true` property to activate an alternative serialization algorithm that reduces the size of grouped events. Additionally, enabling `kogito.events.grouping.compress=true` applies compression to grouped events, further reducing their size at the cost of slightly increased CPU usage.
+* Event performance between {ServerlessLogicProductName} workflows and the Data Index has been significantly enhanced through event batching. To enable event grouping, set the `kogito.events.grouping=true` property. For further optimization, you can use the `kogito.events.grouping.binary=true` property to activate an alternative serialization algorithm that reduces the size of grouped events. Additionally, enabling `kogito.events.grouping.compress=true` applies compression to grouped events, further reducing their size at the cost of slightly increased CPU usage.
 
 * Compensation states are now invoked when a workflow is aborted.
 
