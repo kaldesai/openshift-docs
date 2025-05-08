@@ -68,8 +68,9 @@ OAuth 2.0 token management is handled by a Quarkus `OidcClient`. To enable this 
 [source,xml]
 ----
 <dependency>
-  <groupId>io.quarkus</groupId>
-  <artifactId>quarkus-oidc-client-filter</artifactId>
+  <groupId>io.quarkiverse.openapi.generator</groupId>
+  <artifactId>quarkus-openapi-generator-oidc</artifactId>
+  <version>{ServerlessLogicOauthDependencyVerison}</version>
 </dependency>
 ----
 
@@ -97,6 +98,6 @@ quarkus.oidc-client.oauth_example.credentials.client-secret.value=secret
 
 In this configuration:
 
-* `oauth_example` matches the sanitized name of the `oauth-example` scheme in the OpenAPI file.
+* `oauth_example` matches the sanitized name of the `oauth-example` scheme in the OpenAPI file. The link between the sanitized scheme name and the corresponding `OidcClient` is by using that simple naming convention.
 
 * The OidcClient handles token generation and renewal automatically during workflow execution.
