@@ -25,7 +25,7 @@ This is where you will define global managed properties.
 +
 [source,terminal]
 ----
-$ oc edit sonataflowplatform sonataflow-platform
+$ oc edit sonataflowplatform sonataflow-platform-example
 ----
 
 . Define custom global managed properties.
@@ -40,7 +40,7 @@ In the editor, navigate to the `spec.properties.flow` section and define your de
 apiVersion: sonataflow.org/v1alpha08
 kind: SonataFlowPlatform
 metadata:
-  name: sonataflow-platform
+  name: sonataflow-platform-example
 spec:
     properties:
         flow: <1>
@@ -66,7 +66,7 @@ You can also reference values from existing `ConfigMap` or `Secret` resources us
 apiVersion: sonataflow.org/v1alpha08
 kind: SonataFlowPlatform
 metadata:
-  name: sonataflow-platform
+  name: sonataflow-platform-example
 spec:
     properties:
         flow:
