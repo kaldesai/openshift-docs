@@ -44,12 +44,12 @@
 * {ServerlessLogicProductName} introduces a new data index mutation named `ExecuteAfter`, which enables you to create and execute a new workflow instance that can reuse the output of a previously completed workflow as its input.
 +
 The `ExecuteAfter` mutation accepts the following arguments:
-
-* `processId`: The process ID of the workflow definition to be executed.
-* `processVersion`: The process version of the workflow definition to be executed.
-* `completedInstanceId` (optional): The ID of a previously completed workflow whose output is used as input for the new workflow instance.
-* `input` (optional): Additional input data that is merged with the output of the `completedInstanceId`, if provided.
-* `excludeProperties` (optional): A list of properties that are not copied from the `completedInstanceId` output into the new workflow instance input.
++
+** `processId`: The process ID of the workflow definition to be executed.
+** `processVersion`: The process version of the workflow definition to be executed.
+** `completedInstanceId` (optional): The ID of a previously completed workflow whose output is used as input for the new workflow instance.
+** `input` (optional): Additional input data that is merged with the output of the `completedInstanceId`, if provided.
+** `excludeProperties` (optional): A list of properties that are not copied from the `completedInstanceId` output into the new workflow instance input.
 
 [id="fixed-issues-1-37-0_{context}"]
 == Fixed issues
