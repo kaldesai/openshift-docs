@@ -19,6 +19,18 @@ As a result, the `3scale Kourier gateway` no longer crashes due to file descript
 
 link:https://issues.redhat.com/browse/SRVKS-1343[SRVKS-1343]
 
+Removal of unused webhook server initialization in {ServerlessLogicOperatorName}::
+
+Before this update, the {ServerlessLogicOperatorName} initialized webhook server code that the operator did not use. As a consequence, the Operator included unnecessary initialization logic in its startup sequence. With this release, the {ServerlessLogicOperatorName} removes the unused webhook server initialization code. As a result, the Operator startup process no longer includes unused webhook server components.
+
+link:https://issues.redhat.com/browse/SRVLOGIC-770[SRVLOGIC-770]
+
+Incorrect hibernate schema initialization option in Data Index PostgreSQL deployments::
+
+Before this update, the {ServerlessLogicOperatorName} set the `QUARKUS_HIBERNATE_ORM_DATABASE_GENERATION=update` environment variable for Data Index PostgreSQL deployments. As a consequence, Data Index used an unintended database schema generation strategy. With this release, the {ServerlessLogicOperatorName} removes this environment variable from Operator-managed Data Index deployments. As a result, Data Index now uses the correct schema initialization configuration.
+
+link:https://issues.redhat.com/browse/SRVLOGIC-765[SRVLOGIC-765]
+
 [id="known-issues-1-37-1_{context}"]
 == Known issues
 
