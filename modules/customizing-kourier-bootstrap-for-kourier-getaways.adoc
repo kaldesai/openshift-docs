@@ -1,7 +1,8 @@
 // Module included in the following assemblies:
 //
 // * config-applications/configuring-kourier.adoc
-:_content-type: PROCEDURE
+
+:_mod-docs-content-type: PROCEDURE
 [id="customizing-kourier-bootstrap-for-kourier-getaways_{context}"]
 = Customizing kourier-bootstrap for Kourier getaways
 

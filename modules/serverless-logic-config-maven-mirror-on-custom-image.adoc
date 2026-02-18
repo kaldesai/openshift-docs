@@ -1,7 +1,6 @@
 // Module included in the following assemblies:
 // * serverless-logic/serverless-logic-configuring-custom-maven-mirrors.adoc
 
-
 :_mod-docs-content-type: PROCEDURE
 [id="serverless-logic-config-maven-mirror-on-custom-image_{context}"]
 = Configuring a Maven mirror on a custom image

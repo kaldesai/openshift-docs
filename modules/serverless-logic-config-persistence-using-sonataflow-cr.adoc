@@ -1,7 +1,6 @@
 // Module included in the following assemblies:
 // * serverless-logic/serverless-logic-managing-persistence
 
-
 :_mod-docs-content-type: PROCEDURE
 [id="serverless-logic-config-persistence-using-sonataflow-cr_{context}"]
 = Configuring persistence using the SonataFlow CR

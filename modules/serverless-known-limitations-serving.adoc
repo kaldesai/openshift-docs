@@ -2,7 +2,6 @@
 //
 // * /knative-serving/scalability-and-performance-serving.adoc
 
-
 :_mod-docs-content-type: CONCEPT
 [id="serverless-known-limitations-serving_{context}"]
 = Known limitations of {ServerlessProductName} Serving

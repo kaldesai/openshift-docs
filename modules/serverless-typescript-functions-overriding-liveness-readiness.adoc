@@ -2,7 +2,7 @@
 //
 // * functions/reference/serverless-developing-typescript-functions.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-typescript-functions-overriding-liveness-readiness_{context}"]
 = Overriding liveness and readiness probe values
 
@@ -54,23 +54,19 @@ const Function = {
   liveness: () => {
     process.stdout.write('In liveness\n');
     return 'ok, alive';
-  }, <1>
+  },
 
   readiness: () => {
     process.stdout.write('In readiness\n');
     return 'ok, ready';
-  } <2>
+  }
 };
 
-Function.liveness.path = '/alive'; <3>
-Function.readiness.path = '/ready'; <4>
+Function.liveness.path = '/alive';
+Function.readiness.path = '/ready';
 
 module.exports = Function;
 ----
-<1> Custom `liveness` function.
-<2> Custom `readiness` function.
-<3> Custom `liveness` endpoint.
-<4> Custom `readiness` endpoint.
 +
 As an alternative to `Function.liveness.path` and `Function.readiness.path`, you can specify custom endpoints using the `LIVENESS_URL` and `READINESS_URL` environment variables:
 +
@@ -79,13 +75,10 @@ As an alternative to `Function.liveness.path` and `Function.readiness.path`, you
 run:
   envs:
   - name: LIVENESS_URL
-    value: /alive <1>
+    value: /alive
   - name: READINESS_URL
-    value: /ready <2>
+    value: /ready
 ----
-<1> The liveness path, set to `/alive` here.
-<2> The readiness path, set to `/ready` here.
-
 . Add the new endpoints to the `func.yaml` file, so that they are properly bound to the container for the Knative service:
 +
 [source,yaml]

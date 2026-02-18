@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // * knative-serving/serving-transport-encryption.adoc
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serving-transport-encryption-ensuring-seamless-ca-rotation_{context}"]
 = Ensuring seamless CA rotation
 

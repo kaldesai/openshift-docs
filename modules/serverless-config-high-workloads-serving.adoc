@@ -2,7 +2,6 @@
 //
 // * /knative-serving/scalability-and-performance-serving.adoc
 
-
 :_mod-docs-content-type: PROCEDURE
 [id="serverless-config-high-workloads-serving_{context}"]
 = Configuring Serving for high workloads

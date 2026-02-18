@@ -3,7 +3,7 @@
 // * serverless/knative-serving/config-applications/multi-container-support-for-serving.adoc
 
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-probing-multi-container-service_{context}"]
 = Probing a multi-container service
 
@@ -12,7 +12,6 @@ You can specify readiness and liveness probes for multiple containers. This feat
 
 
 .Procedure
-
 
 . Configure multi-container probing for your service by enabling the `multi-container-probing` feature in the `KnativeServing` CR.
 +

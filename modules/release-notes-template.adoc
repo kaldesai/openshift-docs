@@ -2,7 +2,7 @@
 //
 // * about/serverless-release-notes.adoc
 
-:_content-type: REFERENCE
+:_mod-docs-content-type: REFERENCE
 [id="serverless-rn-X-YY-Z_{context}"]
 = Red Hat {ServerlessProductName} X.YY[.Z]
 // Substitute X-YY-Z with full version (e.g. 1-29-0)

@@ -1,4 +1,4 @@
-:_content-type: CONCEPT
+:_mod-docs-content-type: CONCEPT
 [id="serverless-ossm-traffic-isolation-architecture_context"]
 = High-level architecture
 

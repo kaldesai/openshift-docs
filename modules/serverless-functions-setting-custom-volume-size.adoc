@@ -2,7 +2,7 @@
 //
 // * serverless/functions/serverless-functions-on-cluster-builds.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-functions-setting-custom-volume-size_{context}"]
 = Setting custom volume size
 

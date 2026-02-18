@@ -2,7 +2,7 @@
 //
 // * knative-serving/config-applications/deployment-resources.adoc
 
-:_content-type: CONCEPT
+:_mod-docs-content-type: CONCEPT
 [id="serverless-progress-deadline_{context}"]
 = Progress deadline
 
