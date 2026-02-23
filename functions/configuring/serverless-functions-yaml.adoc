@@ -1,14 +1,14 @@
 :_content-type: ASSEMBLY
 [id="serverless-functions-project-configuration"]
 = Configuring your function project using the func.yaml file
-include::_attributes/common-attributes.adoc[]
+include::../_attributes/common-attributes.adoc[]
 :context: serverless-functions-yaml
 
 toc::[]
 
 The `func.yaml` file contains the configuration for your function project. Values specified in `func.yaml` are used when you execute a `kn func` command. For example, when you run the `kn func build` command, the value in the `build` field is used. In some cases, you can override these values with command line flags or environment variables.
 
-include::modules/serverless-functions-func-yaml-environment-variables.adoc[leveloffset=+1]
+include::../modules/serverless-functions-func-yaml-environment-variables.adoc[leveloffset=+1]
 
 [id="serverless-functions-annotations"]
 == Adding annotations to functions
@@ -21,7 +21,7 @@ There are two limitations of the function annotation feature:
 
 * You cannot set annotations that are set by Knative, for example, the `autoscaling` annotations.
 
-include::modules/serverless-functions-adding-annotations.adoc[leveloffset=+1]
+include::../modules/serverless-functions-adding-annotations.adoc[leveloffset=+1]
 
 [id="additional-resources_serverless-functions-project-configuration"]
 [role="_additional-resources"]
