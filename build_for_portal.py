@@ -548,7 +548,16 @@ def copy_file(
 
 
             # Determine the include src/dest paths
-            include_file = os.path.join(os.path.dirname(book_src_dir), include_path)
+            # Determine the include src/dest paths
+                repo_root = os.path.dirname(book_src_dir)
+                current_dir = cwd or os.path.dirname(src_file)
+
+            # If include path uses traversal (./ or ../), resolve relative to the including file.
+            # Otherwise, treat it as repo-root relative (modules/, _attributes/, snippets/).
+            if include_path.startswith("../") or include_path.startswith("./"):
+                include_file = os.path.normpath(os.path.join(current_dir, include_path))
+            else:
+                include_file = os.path.normpath(os.path.join(repo_root, include_path))
             relative_path = os.path.relpath(include_file, os.path.dirname(src_file))
 
             # If the path is in another book, copy it into this one
