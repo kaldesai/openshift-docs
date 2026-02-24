@@ -2,7 +2,7 @@
 //
 // * serverless/knative_serving/serverless-custom-domains.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-restricting-cipher-suits-odc-admin_{context}"]
 = Restricting cipher suites
 

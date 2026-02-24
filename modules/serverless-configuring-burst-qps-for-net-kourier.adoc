@@ -2,7 +2,7 @@
 //
 // * knative-serving/kube-burst-qps-net-kourier.adoc
 
-:_content-type: REFERENCE
+:_mod-docs-content-type: REFERENCE
 [id="serverless-configuring-burst-qps-for-net-kourier_{context}"]
 = Configuring burst and QPS values for net-kourier
 

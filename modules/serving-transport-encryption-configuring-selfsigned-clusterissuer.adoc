@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // * knative-serving/serving-transport-encryption.adoc
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serving-transport-encryption-configuring-selfsigned-clusterissuer_{context}"]
 = Configuring a SelfSigned cluster issuer
 

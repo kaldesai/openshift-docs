@@ -2,7 +2,7 @@
 //
 // * knative-serving/debugging-serverless-applications.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-applications-checking-revision-status_{context}"]
 = Checking revision status
 

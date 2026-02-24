@@ -5,7 +5,7 @@
 // * service_mesh/v2x/ossm-troubleshooting-istio.adoc
 // * osd_architecture/osd-support.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="support-submitting-a-case_{context}"]
 = Submitting a support case
 

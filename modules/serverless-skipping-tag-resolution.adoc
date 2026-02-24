@@ -2,7 +2,7 @@
 //
 // * knative-serving/config-applications/deployment-resources.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-skipping-tag-resolution_{context}"]
 = Skipping tag resolution
 

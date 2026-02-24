@@ -1,4 +1,4 @@
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-configuring-queue-proxy_{context}"]
 = Configuring Queue Proxy Resources for a Knative Service
 

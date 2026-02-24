@@ -2,7 +2,7 @@
 //
 // * /serverless/install/serverless-upgrades.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-locking-version-for-cli-installed-with-rpm-package-manager_{context}"]
 = Locking version for the Knative CLI installed with RPM package manager
 

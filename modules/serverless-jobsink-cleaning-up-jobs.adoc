@@ -2,7 +2,7 @@
 //
 // * serverless/eventing/event-sinks/serverless-jobsink.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-jobsink-cleaning-up-jobs_{context}"]
 = Cleaning up finished jobs
 

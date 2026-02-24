@@ -2,7 +2,7 @@
 //
 // * serverless/serverless-tracing.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-open-telemetry_{context}"]
 = Using {DTProductName} to enable distributed tracing
 

@@ -2,7 +2,7 @@
 //
 // * serverless/eventing/event-sinks/serverless-kafka-developer-sink.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-creating-a-kafka-event-sink_{context}"]
 = Creating an event sink for Apache Kafka by using the {ocp-product-title} web console
 

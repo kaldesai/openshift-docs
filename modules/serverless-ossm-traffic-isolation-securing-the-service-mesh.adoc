@@ -1,4 +1,4 @@
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-ossm-traffic-isolation-securing-the-service-mesh_{context}"]
 = Securing the {SMProductShortName}
 

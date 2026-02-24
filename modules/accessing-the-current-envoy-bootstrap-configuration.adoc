@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // * config-applications/configuring-kourier.adoc
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="accessing-the-current-envoy-bootstrap-configuration_{context}"]
 = Accessing the current Envoy bootstrap configuration
 

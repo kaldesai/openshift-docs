@@ -2,7 +2,7 @@
 // * about/serverless-logic-overview.adoc
 
 
-:_content-type: CONCEPT
+:_mod-docs-content-type: CONCEPT
 [id="serverless-logic-overview-events_{context}"]
 = Events
 

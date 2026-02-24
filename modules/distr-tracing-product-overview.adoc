@@ -6,7 +6,7 @@ This module included in the following assemblies:
 -serverless/serverless-tracing.adoc
 ////
 
-:_content-type: CONCEPT
+:_mod-docs-content-type: CONCEPT
 [id="distr-tracing-product-overview_{context}"]
 = Distributed tracing overview
 

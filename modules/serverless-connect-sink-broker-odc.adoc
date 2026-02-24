@@ -2,7 +2,7 @@
 //
 // * serverless/eventing/brokers/serverless-using-brokers-managing-brokers.adoc
 
-:_content-type: PROCEDURE
+:_mod-docs-content-type: PROCEDURE
 [id="serverless-connect-sink-broker-odc_{context}"]
 = Connect a broker to a sink
 
