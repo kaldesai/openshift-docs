@@ -16,7 +16,7 @@ Different workflow profiles require different upgrade steps. Follow the instruct
 
 include::modules/serverless-logic-1-37-1-preparing-for-the-upgrade.adoc[leveloffset=+1]
 
-//include::modules/serverless-logic-upgrade-1-37-deleting-workflows-with-dev-profile.adoc[leveloffset=+2]
+include::modules/serverless-logic-upgrade-1-37-deleting-workflows-with-dev-profile.adoc[leveloffset=+2]
 
 //include::modules/serverless-logic-upgrade-1-37-deleting-migrating-workflows-with-preview-profile.adoc[leveloffset=+2]
 
